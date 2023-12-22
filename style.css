@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --letraSec1: #F60037;
+    --fundoHeader2: #F60037;
+    --fundosec1: #E5314B;
+    --letraCat: #E5314B;
+    --botao: #FD0017;
+    --fundoHeader1: #FD0017;
+    --fundoBody: #F0F0F0;
+    --corFonte: #FFFFFF;
+    --letraNavHead: #4b4b4b;
+    --maxWidth1: 1440px;
+    --maxWidth2: 1024px;
+    --maxWidth3: 860px;
+    --gap1: 1.5em;
+    --gap2:.75em;   
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fundoBody);
+}
+
+/* //////////////TEXTOS///////////////////// */
+.titulo2 {
+    font-size: 2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.25;
+}
+
+.titulo3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.titulo4 {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.btn {
+    padding: 1em .75em;
+    width: 15em;
+    font-weight: 700;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+    background-color: var(--botao);
+    color: var(--corFonte);
+}
+
+/* ///////////////Centraliza///////////// */
+.centraliza {
+    max-width: var(--maxWidth1);
+    margin: auto;
+}
+
+/* //////////////CABECALHO////////////// */
+.cabecalho {
+    background-color: #FFFFFF;
+    color: var(--corFonte);
+}
+
+.cabecalho .centraliza {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .75em 0;
+}
+
+.cabecalho img {
+    width: 150px;
+}
+
+.cabecalho p {
+    display: inline-block;
+    color: var(--fundoHeader1);
+}
+
+.cabecalho .bi {
+    margin-right: .25em;
+    font-size: 1.25em;
+}
+#login {
+    color: black;
+}
+#headseat {
+    color: black;
+}
+#carrinho {
+    color: black;
+}
+#lupa {
+    color: black;
+}
+
+/* ////////////////SEARCH///////////// */
+.search {
+    background-color: var(--fundoHeader2);
+    color: var(--corFonte);
+}
+
+.search .centraliza {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75em;
+}
+
+.search p {
+    display: inline-block;
+}
+
+.search input {
+    padding: .25em;
+    border: none;
+    width: 20em;
+    margin-right: .25em;
+    border-radius: .25em;
+    outline: none;
+}
+
+.search .bi {
+    margin-right: .25em;
+    font-size: 1.25em;
+}
+
+/* //////////////////////NAV//////////////////// */
+.navegacao {
+    text-align: center;
+}
+
+.navegacao .centraliza {
+    padding: .75em;
+    text-align: center;
+}
+
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3.5em;
+}
+
+.navegacao li {
+    display: inline-block;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: var(--cinzaEscuro);
+    display: inline-block;
+    font-size: 1em;
+}
+.navegacao a:hover {
+    font-size: 20px;
+    transition: 0.7s;
+    color: var(--fundoHeader1);
+}
+
+/* ////////////////////////////DESTAQUE//////////////////////// */
+.destaque {
+    text-align: center;
+    display: grid;
+    gap: var(--gap1);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'voltaAulas monteEscritorio monteEscritorio'
+        'facil1 facil2 facil3';
+}
+
+.destaque section {
+    padding: 5em 3em;
+    color: var(--cinzaClaro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.destaque section h2,
+.destaque section p {
+    margin-bottom: 1em;
+}
+.destaque h2, p {
+    color: var(--corFonte);
+}
+
+
+#volta__aulas {
+    grid-area: voltaAulas;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Imagens-Lucas/sec1.jpg);
+    background-size: cover;
+}
+
+#monte__escritorio {
+    grid-area: monteEscritorio;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(/Imagens-Lucas/sec2.jpg);
+    background-size: cover;
+}
+
+#monte__escritorio P {
+    width: 70%;
+}
+
+.destaque article {
+    background-color: var(--verde);
+    color: var(--cinzaClaro);
+    padding: 2em 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--corFonte);
+}
+
+.destaque article h3 {
+    margin-bottom: 1em;
+    color: var(--fundoHeader1);
+    font-weight: 500;
+}
+.facilidades p {
+    color: black;
+}
+
+#facili__1 {
+    grid-area: facil1;
+}
+
+#facili__2 {
+    grid-area: facil2;
+}
+
+#facili__3 {
+    grid-area: facil3;
+}
+
+/* /////////////////////////////POPULARES/////////////////////) */
+.populares h2 {
+    color: var(--letraNavHead);
+    text-align: center;
+    margin: 2.5em 0 1em;
+    font-weight: 900;
+}
+
+.populares__grid {
+    display: grid;
+    gap: var(--gap1);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.populares__grid div {
+    background-color: var(--corFonte);
+}
+
+.populares__grid img {
+    width: 90%;
+    margin: auto;
+    transition: .5s;
+}
+.populares__grid img:hover{
+    transform: scale(1.15);
+    transition: .5s;
+}
+
+.populares__grid article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.populares__grid h4 {
+    margin: .5em 0 0;
+    color: var(--fundoHeader1);
+    text-align: center;
+}
+.populares article p {
+    color: black;
+    text-align: center;
+}
+
+/* ///////////////////////////CATEGORIA/////////////////////// */
+.categoria h2 {
+    color: var(--letraNavHead);
+    font-weight: 900;
+    text-align: center;
+    margin: 2.5em 0 1em
+}
+.categoria__grid {
+    display: grid;
+    gap: var(--gap1);;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#cat1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Imagens-Lucas/1-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#cat2{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Imagens-Lucas/2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#cat3{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Imagens-Lucas/3.jpg);
+    background-size: cover;
+}
+#cat4{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/Imagens-Lucas/4.jpg);
+    background-size: cover;
+}
+#cat5{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/Imagens-Lucas/5.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+#cat6{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/Imagens-Lucas/6.jpg);
+    background-size: cover;
+}
+#cat7{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/Imagens-Lucas/7.jpg);
+    background-size: cover;
+}
+#cat8{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/Imagens-Lucas/8.jpg);
+    background-size: cover;
+}
+.categoria__grid div{
+    padding: 5em 1em;
+    color: var(--corFonte);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.categoria__grid hr{
+    width: 50%;
+}
+/* ///////////////////////////DESTAQUE2/////////////////////// */
+.destaque2{
+    display: grid;
+    gap:var(--gap1);;
+    grid-template-columns: 1fr 1fr;
+    margin: 5em auto;
+}
+.destaque2 section{
+    color: var(--corFonte);
+    padding: 3em 7em 3em 3em ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.destaque2 h2{
+    margin-bottom: .5em;
+}
+.destaque2 p{
+    margin-bottom: 1em;
+}
+.destaque2 section:nth-child(1){
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/Imagens-Lucas/escola1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.destaque2 section:nth-child(2){
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/Imagens-Lucas/7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.btn-central {
+    align-items: center;
+}
+/* ////////////////////////////////////APLICATIVO/////////////////////////////// */
+.aplicativo{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.45)), url(/Imagens-Lucas/PHONE.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 3em 3em 3em 30%;
+    color:var(--fundoBody);
+}
+.aplicativo img{
+    height: 300px;
+    margin-right: 2em;
+}
+.aplicativo h2 {
+    margin-top: 36px;
+    color: var(--corFonte);
+    text-align: center;
+}
+
+.aplicativo div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* ///////////////////////////////////CLUBE///////////////////////////// */
+.clube{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.clube article{
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.clube h2{
+    margin-bottom: .5em;
+    
+}
+.clube p{
+    margin-bottom: 2em;
+}
+.clube .dupla__input{
+    display: flex;
+}
+.clube input[type=text]{
+    background-color: #D9D9D9;
+    padding: .5em;
+    border: none;
+    width: 20em;
+    margin-right: .5em;
+    border-radius: .25em;
+    outline: none;
+}
+.clube input[type=submit]{
+    background-color: var(--fundoHeader1);
+    color: var(--fundoBody);
+    padding: .5em 1.5em;
+    border: none;
+    border-radius: .25em;
+    cursor: pointer;
+}
+.clube article:nth-child(1){
+    background-color: #FFFFFF;
+    color: var(--fundoHeader1);
+}
+.clube article:nth-child(2){
+    background-color: var(--fundoHeader1);
+    color: var(--fundoBody);
+}
+.card__branco{
+    padding: 1em 5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.clube .titulo2 {
+    color: var(--fundoHeader1);
+}
+.clube p {
+    color: black;
+}
+.card__branco .titulo2 {
+    color: black;
+}
+.clube hr{
+    border: 8px solid black;
+    width: 80%;
+    margin: 0;
+    margin-bottom: .5em;
+}
+/* ///////////////////////////////RODAPE////////////////////////// */
+.rodape{
+    background-color: var(--fundoHeader1);
+    padding: 1em 0;
+}
+.rodape p {
+    color: var(--corFonte);
+}
+.rodape div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bandeiras__card{
+    display: flex;
+    gap: 2em;
+    font-size: 2em;
+}
+
+/* /////////////////RESPONSIVIDADE/////////////////////// */
+@media screen and (max-width:1450px) {
+    .centraliza{
+        max-width: var(--maxWidth2);
+    }
+}
+
+@media  screen and (max-width: 1025px) {
+    .centraliza{
+        max-width: var(--maxWidth3);
+        padding: 1;
+    }
+}
+@media  screen and (max-width: 860px) {
+    .centraliza{
+        max-width: var(--maxWidth3);
+        padding: .5;
+    }
+    .destaque section, .destaque article{
+        padding: 1.5em;
+    }
+    .populares__grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .categoria__grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .destaque2 section{
+        padding: 1em;
+    }
+    .aplicativo{
+        padding: 2em;
+    }
+    .aplicativo img{
+        height: 200px;
+        margin-right: 1em;
+    }
+    .clube article{
+        padding: 2em 1em;
+    }
+    .card__branco{
+        padding: 2em 1em;
+    }
+    .rodape{
+        padding: 1em;
+    }
+}
+@media screen and (max-width:750px){
+    
+}
